@@ -60,6 +60,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
         - Enable RBAC
         - Enable Add Permissions in the Access Token
 5. Create new API permissions:
+    - `get:drinks`
     - `get:drinks-detail`
     - `post:drinks`
     - `patch:drinks`
@@ -67,9 +68,10 @@ The `--reload` flag will detect file changes and restart the server automaticall
 6. Create new roles for:
     - Barista
         - can `get:drinks-detail`
+        - can `get:drinks`
     - Manager
         - can perform all actions
-7. Test your endpoints with [Postman](https://getpostman.com). 
+7. Test your endpoints with [Postman](https://getpostman.com).
     - Register 2 users - assign the Barista role to one and Manager role to the other.
     - Sign into each account and make note of the JWT.
     - Import the postman collection `./starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json`
